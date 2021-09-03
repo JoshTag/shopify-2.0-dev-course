@@ -35,8 +35,10 @@
   }
 
   .list-menu--inline {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 
   summary.list-menu__item {
@@ -47,6 +49,12 @@
     display: flex;
     align-items: center;
     line-height: 1.3;
+    font-family: var(--font-heading-family);
+    font-size: 24px;
+    color: rgb(var(--color-foreground));
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
   }
 
   .list-menu__item--link {
@@ -316,9 +324,7 @@
       </details-modal>
     {%- endif -%}
 
-    {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading">
-    {%- endif -%}
+    {%- unless request.page_type == 'index' -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
@@ -334,9 +340,7 @@
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
         </a>
-    {%- if request.page_type == 'index' -%}
-      </h1>
-    {%- endif -%}
+    {%- endunless -%}
 
     {%- if section.settings.menu != blank -%}
       <nav class="header__inline-menu">
