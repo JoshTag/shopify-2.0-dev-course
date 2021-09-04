@@ -263,6 +263,7 @@ a.product__text {
 
 .product .price {
   align-items: flex-start;
+  justify-content: left;
 }
 
 .product .price--on-sale dl {
