@@ -2345,3 +2345,26 @@ details-disclosure > details {
 .social-sharing .icon-twitter {
   color: #00aced;
 }
+
+.moo-footer {
+  background-color: #E8EFFA;
+  height: 60px;
+  margin-top: 100px;
+}
+
+.moo-footer a {
+  font-family: var(--font-heading-family);
+  font-size: 24px;
+  margin-left: 40px;
+  position: relative;
+  top: -20px;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .moo-footer a {
+    margin-left: 100px;
+    font-size: 28px;
+    top: -25px;
+  }
+}

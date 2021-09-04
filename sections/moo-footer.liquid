@@ -1,0 +1,25 @@
+<footer class="moo-footer">
+  <div>
+    {% for link in section.settings.footer_menu.links %}
+       <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Moo footer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Moo footer"
+    }
+  ]
+}
+{% endschema %}
