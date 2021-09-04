@@ -214,7 +214,7 @@
             </div>
           {%- endif -%}
 
-          <div class="collection-product-count light" role="status">
+          <div class="collection-product-count" role="status">
             <p id="CollectionProductCountDesktop" class="collection-product-count__text">
               {%- if collection.products_count == collection.all_products_count -%}
                 {{ 'sections.collection_template.product_count_simple' | t: count: collection.products_count }}
@@ -485,7 +485,7 @@
         <ul id="main-collection-product-grid" data-id="{{ section.id }}" class="
           grid grid--2-col negative-margin product-grid
           {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
-            {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
+            {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--3-col-desktop grid--quarter-max{% endif %}
           {% endif %}">
           {%- for product in collection.products -%}
             <li class="grid__item">

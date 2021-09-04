@@ -165,6 +165,9 @@
 .card-information__text {
   display: block;
   padding-right: 1.2rem;
+  text-align: center;
+  font-size: 17px;
+  font-family: var(--font-body-family);
 }
 
 .card-information__wrapper {
@@ -297,5 +300,29 @@
   .card-wrapper:hover .card--soft {
     background-color: rgba(var(--color-card-hover), 0.06);
     transition: background-color var(--duration-long) ease;
+  }
+}
+
+.product-bubble--collection {
+  left: unset;
+  right: 10%;
+  top: 0;
+  height: 75px;
+  width: 70px;
+}
+
+.product-bubble--collection > span {
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  .product-bubble--collection {
+    right: 20%;
+    top: 50px;
+    height: 95px;
+    width: 90px;
+  }
+
+  .product-bubble--collection > span {
+    font-size: 15px;
   }
 }

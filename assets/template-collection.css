@@ -1,5 +1,17 @@
 .collection-grid-section {
-  margin-top: 3rem;
+  margin-top: 10rem;
+  position: relative;
+}
+
+.collection-grid-section:before {
+  content: "";
+  position: absolute;
+  background-color: rgb(var(--color-foreground));
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 10px;
+  z-index: -1;
 }
 
 .collection {
@@ -66,12 +78,17 @@
   align-self: center;
   position: relative;
   text-align: right;
+  display: flex;
 }
 
 .collection-product-count__text {
   font-size: 1.4rem;
   line-height: 1.5;
   margin: 0;
+  background-color: #fff;
+  width: 120px;
+  text-align: center;
+  margin-left: auto;
 }
 
 .collection-product-count__text.loading {
@@ -135,7 +152,8 @@
   display: flex;
   grid-column: 2;
   grid-row: 1;
-  padding-left: 2.5rem;
+  padding: 0 10px;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 990px) {
@@ -226,7 +244,7 @@
 .facets__form {
   display: grid;
   gap: 0 3.5rem;
-  grid-template-columns: 1fr max-content max-content;
+  grid-template-columns: max-content max-content 1fr;
   margin-bottom: 0.5rem;
 }
 
@@ -237,6 +255,8 @@
   grid-row: 1;
   display: flex;
   flex-wrap: wrap;
+  background-color: #fff;
+  padding-left: 20px;
 }
 
 .facets__heading {

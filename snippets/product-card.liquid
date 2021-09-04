@@ -74,12 +74,16 @@
           <div class="card__content"><h2 class="card__text h3">{{ product_card_product.title }}</h2></div>
         {%- endif -%}
 
-        <div class="card__badge">
-          {%- if product_card_product.available == false -%}
-            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.sold_out' | t }}</span>
-          {%- elsif product_card_product.compare_at_price > product_card_product.price and product_card_product.available -%}
-            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.on_sale' | t }}</span>
-          {%- endif -%}
+        <div class="product-bubble product-bubble--collection bubble--{% if product_card_product.tags contains "New" %}new{% elsif product_card_product.tags contains "Fave" %}fave{% elsif product_card_product.compare_at_price != blank %}sale{% endif %}">
+          <span>
+            {% if product_card_product.tags contains "New" %}
+              new
+            {% elsif product_card_product.tags contains "Fave" %}
+              staff<br/>fave
+            {% elsif product_card_product.compare_at_price != blank  %}
+              sale
+            {% endif %}
+          </span>
         </div>
       </div>
     </div>
