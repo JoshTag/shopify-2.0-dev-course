@@ -711,3 +711,22 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+$("#toTop").click(function () {
+  $("html, body").animate({scrollTop: 0}, 800);
+ });
+
+window.onload = (event) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  gsap.utils.toArray(".parallax").forEach(layer => {
+    tl.to(layer, {y: -900, ease: "none"}, 0)
+  });
+  }

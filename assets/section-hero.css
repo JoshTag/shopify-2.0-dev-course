@@ -140,3 +140,78 @@
   opacity: 1;
   transition: opacity 0.3s;
 }
+
+.parallax {
+  position: absolute !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10000;
+}
+
+.parallax-one {
+  top: 100px;
+  left: -190px;
+  height: 750px;
+  width: 320px;}
+  @media screen and (min-width: 490px) {
+    .parallax-one {
+      height: 900px;}
+  }
+  @media screen and (min-width: 600px) {
+    .parallax-one {
+      top: 70px;
+      left: -160px;}
+  }
+  @media screen and (min-width: 768px) {
+    .parallax-one {
+      height: 900px;
+      top: -39px;
+      left: -200px;}
+  }
+  @media screen and (min-width: 1024px) {
+    .parallax-one {
+      top: 20px;}
+  }
+  @media screen and (min-width: 1100px) {
+    .parallax-one {
+      left: -160px;}
+  }
+  @media screen and (min-width: 1200px) {
+    .parallax-one {
+      left: -130px;}
+  }
+
+
+.parallax-two {
+  top: 180px;
+  right: -234px;
+  height: 700px;
+  width: 320px;}
+  @media screen and (min-width: 490px) {
+    .parallax-two {
+      height: 880px;
+      right: -174px;}
+  }
+  @media screen and (min-width: 600px) {
+    .parallax-two {
+      top: 50px;
+      right: -114px;}
+  }
+  @media screen and (min-width: 768px) {
+    .parallax-two {
+      top: -10px;
+      right: -170px;
+      height: 808px;}
+  }
+  @media screen and (min-width: 1024px) {
+    .parallax-two {
+      height: 940px;}
+  }
+  @media screen and (min-width: 1100px) {
+    .parallax-two {
+      right: -150px;}
+  }
+  @media screen and (min-width: 1200px) {
+    .parallax-two {
+      right: -140px;}
+  }
