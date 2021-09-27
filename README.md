@@ -1,4 +1,4 @@
-# Welcome to the Shopify + Next.js + Tailwind CSS course
+# Welcome to the Theme Development with Online Store 2.0 course!
 
 <div align="center">
   <img src="https://cdn.shopify.com/s/files/1/0600/7078/9312/files/ezgif.com-gif-maker.gif?v=1632495493" alt="shopify online store 2.0 course preview">
